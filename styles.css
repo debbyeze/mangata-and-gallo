@@ -1,0 +1,454 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+position: relative;
+  display: grid;
+  background-color: #ffffff;
+  font-family: "Merriweather", serif;
+  margin-top: 1rem;
+  max-width: 100vw;
+  grid-template-areas:
+    "head head"
+    "nav  nav"
+    "main main"
+    "footer  footer";
+
+ grid-template-rows: auto auto 1fr auto;
+  /* grid-template-rows: 30px 1fr 30px; */
+
+
+  grid-template-columns: 100%;
+
+}
+
+header {
+  display: inline;
+  grid-area: head;
+}
+header img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+nav {
+  grid-area: nav;
+  padding: 1em;
+  width: 100%;
+  margin-top: 1rem;
+  background-color: #ffffff;
+  box-shadow: 5px 5px 20px silver;
+}
+.menu{
+ display: none;
+ width: 50px;
+ height: 50px;
+}
+.menu img{
+display: block;
+margin: auto;
+}
+.close{
+display: none;
+width: 50px;
+ height: 50px;
+
+}
+.close img{
+display: block;
+margin: auto;
+}
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+nav li {
+  display: inline-block;
+  margin: 0px 4%;
+}
+nav li a, #cart-aside > a {
+  text-decoration: none;
+  color: black;
+  font-size: large;
+}
+nav li a:hover {
+  background-color: black;
+  color: #ffffff;
+  padding: 10px;
+}
+nav li:last-child a:hover, #cart-aside >a:hover{
+ background-color: silver;
+ color: black;
+ padding: 10px;
+}
+#cart-aside{
+margin-top: 10px;
+  display: none;
+
+}
+main {
+  grid-area: main;
+}
+.banner {
+  background-image:  url("/mangata-gallo/mangallo-img.png");
+  height: 85vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  animation-name: bgChange;
+  transition:ease;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+}
+
+.banner article {
+  color: white;
+  position: absolute;
+  top: 40%;
+  left: 2%;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  animation-name: slidein;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
+  transition: ease-in;
+}
+.banner article h1 {
+  font-weight: bolder;
+  font-size: 45px;
+}
+.banner article p {
+  font-size: 18px;
+  font-style: italic;
+}
+.banner-btn {
+  display: flex;
+  position: absolute;
+  top: 68%;
+  padding-left: 2em;
+}
+.banner-btn button, #modal button {
+  outline: none;
+  border: none;
+  width: 9em;
+  height: 2.5em;
+  font-size: 1em;
+  font-weight: 500;
+}
+.banner-btn button a {
+  text-decoration: none;
+  color: rgb(3, 3, 68);
+}
+.banner-btn button:first-child, #modal button {
+  background-color: rgb(3, 3, 68);
+  color: #ffffff;
+}
+#modal button > a{
+text-decoration: none;
+color: #ffffff;
+}
+#modal button{
+ margin-top: 10px;
+ border-radius: 10px;
+}
+
+.banner-btn button:hover,
+.banner-btn button > a:hover {
+  font-weight: 600;
+  font-size: 1em;
+}
+#modal{
+position: absolute;
+display: none;
+justify-content: center;
+align-items: center;
+top: 13%;
+z-index: 200;
+line-height: 2em;
+text-align: center;
+
+}
+#modal h2{
+ padding: 15px;
+}
+#modal > article{
+background-color: #ffffff;
+padding: 20px;
+margin: auto;
+z-index: 50;
+transition: 5s ease-in;
+width: 40%;
+border-radius: 10px;
+border: 1px dashed silver;
+box-shadow: 2px 2px 5px 2px silver;
+
+}
+#modal #closeModal{
+ width: 40px;
+ margin-left: 90%;
+}
+
+
+
+.products,
+.products > h2 {
+  padding: 1.2em;
+  text-align: center;
+}
+.products-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.products-row > article {
+  flex: 1;
+  padding: 3em;
+  box-shadow: 5px 5px 10px silver;
+  margin: 2rem;
+  border-radius: 10px;
+  
+}
+.products-row:hover article {
+  transform: translateY(5px);
+  transition-duration: 1s;
+}
+.products-row article h2 {
+  padding: 0.8em;
+  font-weight: 400;
+}
+
+.products-row article p {
+  text-align: justify;
+  font-weight: 200;
+  color:black;
+  font-size: 1.1rem;
+  padding: 5px 10px 0px 10px;
+}
+.products a{
+ text-decoration: none;
+ color: black;
+}
+figure img{
+ display: block;
+ width: 100%;
+ margin: auto;
+}
+details {
+  text-align: justify;
+  color: black;
+  margin: 0.2em 0;
+}
+details p {
+  padding: 2px;
+}
+
+.products button {
+  background-color: #ffffff;
+  color: black;
+  border: 2px solid black;
+  padding: 0.5rem 2rem;
+  margin: 0.5em;
+}
+
+.products button:hover {
+  background-color: silver;
+  color: black;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+}
+.banner-two {
+background: black;
+padding: 1em;
+min-height: 55vh;
+color:#ffffff;
+}
+.banner-two img {
+display: block;
+}
+.banner-two a{
+ text-decoration: none;
+ color: black;
+animation-name: colorBlack;
+ animation-duration: 5s;
+ transition: ease-in-out;
+ animation-iteration-count: infinite;}
+.promo{
+ display: flex;
+ margin: 0 10%;
+  padding: 2em 2em 0em;
+
+ 
+}
+.promo .promo-text{
+ margin-right: 20px;
+ max-height: 30vh;
+ margin-bottom: 10px;
+ 
+}
+.promo .promo-text h1{
+ font-size: 2em;
+  margin-bottom: 1em;
+ font-style: italic;
+}
+.promo .promo-text p{
+font-size: 1.1rem;
+overflow: hidden;
+line-height: 1.5em;
+}
+.promo-btn{
+ background-color: silver;
+ color: black;
+ display: block;
+ margin: auto;
+ border-radius: 10px;
+ padding: 1rem 3rem;
+ font-size: 1.2rem;
+ animation-name: colorBlack;
+ animation-duration: 5s;
+ transition: ease-in-out;
+ animation-iteration-count: infinite;
+}
+.gallery{
+ padding: 1em 2em 2em 2em;
+ background-color: #ffffff;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ /* min-height: 85vh; */
+ max-width: 95vw;
+ 
+
+}
+
+.gallery-box{
+overflow:hidden;
+  display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 5vw);
+    grid-gap: 1rem;
+ 
+}
+.gallery-box img{
+ width: 15em;
+    height: 25em;
+    object-fit: cover;
+    
+}
+
+hr {
+  margin-bottom: 1em;
+}
+footer {
+
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  background-color: silver;
+  justify-content: space-between;
+  padding: 1rem;
+}
+footer div {
+  flex: 1;
+  grid-area: footer;
+}
+footer >div > img {
+  display: block;
+  margin: auto;
+}
+footer div p {
+  text-align: center;
+  padding: 1em;
+  margin-top: 3%;
+  font-weight: 600;
+  color: black;
+}
+button:hover{
+ cursor: pointer;
+}
+@media screen and (max-width: 700px) {
+nav{
+display: flex;
+justify-content: space-between;
+}
+nav ul{
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-start;
+ align-items: flex-start;
+
+}
+nav> ul> li{
+ padding: 10px;
+ margin: 10px 0;
+ display: none;
+}
+.menu{
+display: block;
+}
+#cart-aside{
+ display: block;
+}
+  .banner-btn {
+    top: 80%;
+  }
+  #modal article{
+   width: 70%;
+  }
+  /* body{
+  font-size: 0.8em;
+ } */
+  .promo .promo-text{
+  overflow:hidden;
+  }
+  .gallery-box img:last-child{
+    width: 100%;
+  }
+  
+  .gallery-box img{
+ width: 13em;
+    height: 10em;
+    object-fit: cover;
+}
+  
+  .products-row{
+   font-size: 0.7rem;
+  }
+  
+}
+@keyframes slidein {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 4%;
+  }
+}
+@keyframes colorBlack{
+   from{
+     background-color: silver;
+     color:black;
+
+   }
+   to{
+      background-color: black;
+      border: 1.5px dashed #ffffff;
+     color:#ffffff;
+     font-weight: bold;
+   }
+   
+}
+@keyframes bgChange{
+ from{
+   background-image: url("/mangata-gallo/mangallo-img.png");
+   
+ }
+ to{
+   background-image: url("/mangata-gallo/banner_jewelry-removebg-preview.png");
+   
+ }
+}

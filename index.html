@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mangata and Gallo</title>
+    <meta name="author" content="Mangata and Gallo" />
+    <meta
+      name="description"
+      content="a jewelry store that specializes in special occasions like engagements, weddings and anniversaries"
+    />
+    <meta property="og:title" content="Mangata and Gallo Jewelry" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://127.0.0.1:5500/index.html" />
+    <meta
+      property="og:image"
+      content="http://127.0.0.1:5500/index.html/curly design 1.jpg"
+    />
+    <meta name="og:locale" content="en_US" />
+
+    <!-- include css file -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
+    <header>
+      <img
+        src="/mangata-gallo/Asset 1@3x.png"
+        alt="logo"
+        width="150px"
+        height="50px"
+      />
+    </header>
+    <nav id="nav">
+      <!-- menubtn -->
+      <div class="menu" id="menu">
+        <img
+          src="/mangata-gallo/menu.png"
+          alt="menu"
+          height="40px"
+          width="40px"
+        />
+      </div>
+      <div class="close" id="close">
+        <img
+          src="/mangata-gallo/icons8-close-30.png"
+          alt="close"
+          height="30px"
+          width="30px"
+        />
+      </div>
+
+      <!-- navlist -->
+      <ul>
+        <li class="nav-list"><a href="index.html">Home</a></li>
+        <li class="nav-list"><a href="/pages/products.html">Products</a></li>
+        <li class="nav-list"><a href="/pages//contact.html">Contact</a></li>
+        <li class="nav-list">
+          <a href="/pages/cart.html"
+            >cart
+            <img
+              src="/mangata-gallo/1x/outline_add_shopping_cart_black_24dp.png"
+              alt="cart"
+              width="20px"
+              height="15px"
+          /></a>
+        </li>
+      </ul>
+      <div id="cart-aside">
+        <a href="/pages/cart.html"
+          >cart
+          <img
+            src="/mangata-gallo/1x/outline_add_shopping_cart_black_24dp.png"
+            alt="cart"
+            width="20px"
+            height="15px"
+        /></a>
+      </div>
+    </nav>
+    <main id="modal-bg">
+      <!-- portfolio -->
+      <section class="banner">
+        <article>
+          <h1>Luxry Diamond jewelries</h1>
+          <p>Create beautiful moments</p>
+        </article>
+        <div class="banner-btn">
+          <button onclick="showModal()">Learn more</button>
+          <button><a href="/pages/products.html">Order</a></button>
+        </div>
+      </section>
+
+      <!-- modal -->
+      <section id="modal">
+        <article id="modal-article">
+          <div  id="closeModal" onclick="closeModal()" >
+            <img
+              src="/mangata-gallo/icons8-close-30.png"
+              alt="close"
+              height="20px"
+              width="20px"
+            />
+          </div>
+
+          <h2>About Mangata and Gallo</h2>
+          <p>
+            Mangata and Gallo is a jewelry store that specializes in special
+            occasions like engagements, weddings and anniversaries. The jewelry
+            company primarily operates online and has a small storefront in
+            Austin, Texas with an atelier attached for browsing. Mangata &
+            Gallo's selection of jewelry is known for its high-quality and
+            classic look. The owner, an Austin local, is well known for her
+            jewelry designs.
+          </p>
+
+          <p>
+            Mariana is the owner and the lead designer of Mangata and Gallo.
+            After graduating from design school with a specialization in diamond
+            cutting and metal smithing, Mariana opened a store in her hometown,
+            Austin and started to grow her business online. Mariana has always
+            managed every aspect of the business, from jewelry design to
+            marketing to e-commerce.
+          </p>
+          <button><a href="/pages/contact.html">Contact us</a></button>
+        </article>
+      </section>
+
+      <!-- products -->
+      <section class="products" id="products">
+        <img
+          src="/mangata-gallo/curly design 1.jpg"
+          alt="curly design"
+          height="50px"
+        />
+        <h2>WHAT'S NEW</h2>
+        <!-- cards -->
+        <div class="products-row">
+          <article id="article">
+            <h2>DIAMOND RING</h2>
+            <hr />
+            <figure>
+              <img
+                src="/mangata-gallo/ring1.jpg"
+                alt="diamond ring"
+                height="200px"
+              />
+            </figure>
+            <p>New wedding and engament ring, with blue design</p>
+            <details>
+              <summary>Prices</summary>
+              <p>1 - 5pieces - 15$</p>
+              <p>6 - 20pieces - 13$</p>
+              <p>20 and above - 10$</p>
+            </details>
+            <button>
+              <a href="/pages/products.html#bluering">ORDER</a>
+              <img
+                src="/mangata-gallo/1x/outline_add_shopping_cart_black_24dp.png"
+                alt="cart"
+                width="20px"
+                height="20px"
+              />
+            </button>
+          </article>
+
+          <article id="article">
+            <h2>ORIGINAL DIAMOND RING</h2>
+            <hr />
+            <figure>
+              <img
+                src="/mangata-gallo/ring2.jpg"
+                alt="diamond ring"
+                height="200px"
+              />
+            </figure>
+            <p>Elegant diamond ring</p>
+            <details>
+              <summary>Prices</summary>
+              <p>1 - 5pieces - 25$</p>
+              <p>6 - 20pieces - 20$</p>
+              <p>20 and above - 18$</p>
+            </details>
+            <button>
+              <a href="/pages/products.html#diamondring">ORDER</a>
+              <img
+                src="/mangata-gallo/1x/outline_add_shopping_cart_black_24dp.png"
+                alt="cart"
+                width="20px"
+                height="20px"
+              />
+            </button>
+          </article>
+
+          <article id="article">
+            <h2>JEWELRY SET</h2>
+            <hr />
+            <figure>
+              <img src="/mangata-gallo/necklace 2.jpg" height="200px" />
+            </figure>
+            <p>Set of Jewelry collections</p>
+            <details>
+              <summary>Prices</summary>
+              <p>1 - 5pieces - 40$</p>
+              <p>6 - 20pieces - 35$</p>
+              <p>20 and above - 30$</p>
+            </details>
+            <button>
+              <a href="/pages/products.html#jewelryset">ORDER</a>
+              <img
+                src="/mangata-gallo/1x/outline_add_shopping_cart_black_24dp.png"
+                alt="cart"
+                width="20px"
+                height="20px"
+              />
+            </button>
+          </article>
+        </div>
+        <button><a href="/pages/products.html">See More</a></button>
+      </section>
+
+      <!-- banner-two -->
+      <section class="banner-two">
+        <img
+          src="/mangata-gallo/Asset 4@3x.png"
+          alt="logo"
+          height="70px"
+          width="70%"
+          style="margin: auto"
+        />
+        <div class="promo">
+          <article class="promo-text">
+            <h1>Enjoy great offer Today!!</h1>
+            <p>
+              We offer the best quality diamond jewelry for weddings,
+              anniversary and occassions. <br />
+              Get yours at affordable rate.
+            </p>
+          </article>
+          <img
+            src="/mangata-gallo/black ring.jpg"
+            alt="ring"
+            height="150px"
+            loading="eager"
+          />
+        </div>
+        <button class="promo-btn">
+          <a href="/pages/products.html">Enjoy Offer</a>
+        </button>
+      </section>
+
+      <!-- picture samples -->
+      <section class="gallery">
+        <div class="gallery-box">
+          <figure>
+            <img
+              src="/mangata-gallo/pexels-hussein-altameemi-11804720.jpg"
+              alt="jewelry"
+            />
+          </figure>
+          <figure>
+            <img
+              src="/mangata-gallo/pexels-the-glorious-studio-5442468.jpg"
+              alt="jewelry"
+            />
+          </figure>
+          <figure>
+            <img
+              src="/mangata-gallo/pexels-the-glorious-studio-8891951.jpg"
+              alt="jewelry"
+            />
+          </figure>
+          <figure>
+            <img
+              src="/mangata-gallo/pexels-irina-iriser-916344.jpg"
+              alt="jewelry"
+            />
+          </figure>
+          <figure>
+            <img
+              src="/mangata-gallo/pexels-megapixelstock-17834.jpg"
+              alt="jewelry"
+            />
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <!-- foot -->
+    <footer>
+      <div>
+        <img
+          src="/mangata-gallo/Asset 1@3x.png"
+          alt="logo"
+          width="200px"
+          height="70px"
+        />
+      </div>
+      <div>
+        <hr />
+        <p>Copyright Mangata Gallo</p>
+      </div>
+    </footer>
+    <script src="/index.js"></script>
+  </body>
+</html>

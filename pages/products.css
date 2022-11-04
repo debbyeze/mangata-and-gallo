@@ -1,0 +1,363 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: "Merriweather", serif;
+  margin-top: 1rem;
+  max-width: 100vw;
+  grid-template-areas:
+    "head head"
+    "nav  nav"
+    "main main"
+    "footer  footer";
+
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-columns: 100%;
+}
+
+header {
+  display: inline;
+  grid-area: header;
+}
+
+header img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav {
+  padding: 1em;
+  grid-area: nav;
+  margin-top: 0.5rem;
+  background-color: #ffffff;
+  box-shadow: 5px 5px 20px silver;
+}
+
+.menu {
+  display: none;
+  width: 50px;
+  height: 50px;
+}
+
+.menu img {
+  display: block;
+  margin: auto;
+}
+
+.close {
+  display: none;
+  width: 50px;
+  height: 50px;
+
+}
+
+.close img {
+  display: block;
+  margin: auto;
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0px 4%;
+}
+
+nav li a, #cart-aside > a {
+  text-decoration: none;
+  color: black;
+  font-size: large;
+}
+nav li a:hover {
+  background-color: black;
+  color: #ffffff;
+  padding: 10px;
+}
+nav li:last-child a:hover, #cart-aside >a:hover{
+ background-color: silver;
+ color: black;
+ padding: 10px;
+}
+#cart-aside{
+margin-top: 10px;
+  display: none;
+
+}
+
+main {
+  grid-area: main;
+  display: grid;
+  grid-template-areas: "category container";
+  grid-template-columns: 22vw 1fr;
+  margin-top: 5px;
+  background-color: rgb(226, 226, 226);
+  position: relative;
+}
+.arrow{
+width: 30px;
+height: 30px;
+border-radius: 50%;
+padding: 5px;
+background-color: silver;
+position: fixed;
+bottom: 5%;
+/* left: 5%; */
+margin: auto;
+}
+.arrow a > img{
+display: block;
+margin: auto;
+}
+/* html:not([data-scroll='0']) .arrow {
+  display: none;
+} */
+.category {
+  grid-area: category;
+  padding: 2rem;
+  margin: 3px;
+  background-color: #ffffff;
+  width: 98%;
+}
+
+.category h3 {
+  text-align: center;
+}
+
+.category ul {
+  list-style: none;
+}
+
+.category ul li {
+  margin: 40px 0;
+  padding: 10px 30px;
+  box-shadow: 2px 2px 2px rgb(226, 226, 226);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.category ul a {
+  text-decoration: none;
+  color: rgb(3, 3, 68);
+  text-align: center;
+  font-weight: bold;
+}
+
+.container {
+  grid-area: container;
+  padding: 5px;
+  background-color: #ffffff;
+  margin: 3px;
+  width: 98%;
+}
+
+.container .row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto;
+  grid-gap: 5px;
+}
+
+.container .row article {
+position: relative;
+  max-width: 250px;
+  width: 100%;
+  margin: 2px;
+  box-shadow: 2px 2px 2px rgb(226, 226, 226);
+  background-color: #ffffff;
+  height: 280px;
+}
+.container .row article:hover{
+border: 1px solid black;
+padding: 2px;
+}
+
+.container .row article figure {
+  height: 200px;
+}
+
+
+.container .row article figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container .row article  p:first-child{
+ margin: 10px;
+}
+
+.cart-img{
+position: absolute;
+bottom: 2%;
+right: 2%;
+outline: none;
+border:1px solid rgb(3, 3, 68);
+background-color:#ffffff;
+border-radius: 5px;
+color: rgb(3, 3, 68);
+padding: 5px 10px;
+}
+.price{
+position: absolute;
+bottom: 2%;
+left: 2%;
+  font-weight: bold;
+}
+
+.ads-img{
+padding-top: 20px;
+padding-bottom: 15px;
+
+}
+.ads-img > img{
+display:block;
+margin: auto;
+width: 500px;
+height: 8vh;
+}
+
+.ads {
+  background-image: linear-gradient(to left, black, rgb(3, 3, 63));
+
+  height: 20vh;
+  padding: 5px;
+}
+
+.ads h2,
+.ads p {
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.35em;
+  line-height: 1.2em;
+}
+
+.ads p {
+  font-style: italic;
+
+}
+
+.ads img {
+  display: block;
+  margin: auto;
+}
+
+.ads>.ads-heading::after {
+  animation-name: ads;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: 15s;
+  animation-direction: normal;
+  content: "THE BEST DIAMOND JEWELRY DEALER";
+
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  background-color: silver;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+footer div {
+  flex: 1;
+}
+
+footer div img {
+  display: block;
+  margin: auto;
+}
+
+footer div p {
+  text-align: center;
+  padding: 1em;
+  margin-top: 3%;
+  font-weight: 600;
+  color: black;
+}
+
+@media screen and (max-width: 700px) {
+nav{
+display: flex;
+justify-content: space-between;
+}
+nav ul{
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-start;
+ align-items: flex-start;
+
+}
+nav> ul> li{
+ padding: 10px;
+ margin: 10px 0;
+ display: none;
+}
+.menu{
+display: block;
+}
+#cart-aside{
+ display: block;
+}
+  .category ul li {
+    box-shadow: none;
+  }
+
+  .category ul li a {
+    font-weight: 200;
+  }
+
+  .category {
+    padding: 0;
+    margin: 1px;
+    padding-top: 3em;
+  }
+
+  .container .row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    grid-gap: 5px;
+  }
+.ads-img > img{
+width: 300px;
+height: 8vh;
+}
+
+  body {
+    font-size: 0.8rem;
+  }
+  button{
+   font-size: 0.9em;
+      
+
+  }
+  .cart-img{
+     padding: 1px 3px;
+  }
+  button img{
+   width:15px;
+   height: 12px;
+  }
+}
+
+@keyframes ads {
+  from {
+    content: "THE BEST DIAMOND JEWELRY DEALER";
+  
+  }
+
+  to {
+    content: "DIAMOND JEWELRY STANDS OUT";
+
+  }
+}

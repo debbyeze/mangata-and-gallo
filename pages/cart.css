@@ -1,0 +1,168 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: "Merriweather", serif;
+  margin-top: 1rem;
+  max-width: 100vw;
+  grid-template-areas:
+    "head head"
+    "nav  nav"
+    "main main"
+    "footer  footer";
+
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-columns: 100%;
+}
+
+header {
+  display: inline;
+  grid-area: header;
+}
+
+header img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav {
+  padding: 1em;
+  grid-area: nav;
+  margin-top: 0.5rem;
+  background-color: #ffffff;
+  box-shadow: 5px 5px 20px silver;
+}
+
+.menu {
+  display: none;
+  width: 50px;
+  height: 50px;
+}
+
+.menu img {
+  display: block;
+  margin: auto;
+}
+
+.close {
+  display: none;
+  width: 50px;
+  height: 50px;
+
+}
+
+.close img {
+  display: block;
+  margin: auto;
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0px 4%;
+}
+
+nav li a,
+#cart-aside>a {
+  text-decoration: none;
+  color: black;
+  font-size: large;
+}
+
+nav li a:hover {
+  background-color: black;
+  color: #ffffff;
+  padding: 10px;
+}
+
+nav li:last-child a:hover,
+#cart-aside>a:hover {
+  background-color: silver;
+  color: black;
+  padding: 10px;
+}
+
+#cart-aside {
+  margin-top: 10px;
+  display: none;
+}
+.container{
+display: flex;
+flex-direction: column;
+justify-content: center;
+margin: 10px;
+padding: 10px 15%;
+}
+#no-item{
+ color: silver;
+ letter-spacing: 5px;
+ font-size: 2em;
+ margin: 30vh 0;
+ text-align: center;
+ opacity: 0.5;
+ display: none;
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  background-color: silver;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+footer div {
+  flex: 1;
+}
+
+footer div img {
+  display: block;
+  margin: auto;
+}
+
+footer div p {
+  text-align: center;
+  padding: 1em;
+  margin-top: 3%;
+  font-weight: 600;
+  color: black;
+}
+
+@media screen and (max-width: 700px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    
+
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+  }
+
+  nav>ul>li {
+    padding: 10px;
+    margin: 10px 0;
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+#cart-aside{
+ display: block;
+}
+}
